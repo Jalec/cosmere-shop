@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 400px;
+    height: auto;
+    background-color: white;
+    box-shadow: 5px 5px 20px 5px darkslateblue;
+}
+
+.product img{
+    width: 300px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.addCartBtn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(166, 166, 235);
+    border: 1px solid rgb(90, 33, 156);
+    border-radius: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addCartBtn:hover {
+    color: white;
+    background-color: rgb(90, 33, 156);
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
