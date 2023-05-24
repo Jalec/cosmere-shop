@@ -6,9 +6,6 @@ import './shop.css';
 export const Shop = () => {
     return (
         <div>
-            <div className="shopTitle">
-                <h1>Cosmere Shop</h1>
-            </div>
             <div className="shop">
                 <div className="products">
                     {PRODUCTS.map((product) => (

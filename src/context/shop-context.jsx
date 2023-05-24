@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState} from "react";
 import { PRODUCTS } from "../products";
 
 export const ShopContext = createContext(null);
@@ -14,10 +14,6 @@ export const ShopContextProvider = (props) => {
         7: 0,
         8: 0
     });
-
-    useEffect(() => {
-        console.log(cartItems);
-    })
 
     const getTotalCartAmount = () => {
         let totalAmount = 0;
@@ -46,7 +42,7 @@ export const ShopContextProvider = (props) => {
 
     return (
         <ShopContext.Provider value={contextValue}>
-        {props.children}
+            {props.children}
         </ShopContext.Provider>
     )
 }
