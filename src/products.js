@@ -17,7 +17,7 @@ export const PRODUCTS = [
     {
         id: 2,
         productName: "Alloy of Law",
-        price: 60.0,
+        price: 150.0,
         productImage: product2
     },
     {
