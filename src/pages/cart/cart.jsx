@@ -13,12 +13,12 @@ export const Cart = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="flex flex-col justify-center items-center mt-10 2xl:gap-20 xl:gap-8 font-poppins">
+        <div className="flex flex-col justify-center items-center mt-10 2xl:gap-20 xl:gap-8 gap-12 font-poppins">
             <div className="text-blue-700 text-4xl font-extrabold font-poppins">
                 <h1>Your Cart</h1>
             </div>
             <div className="flex xl:flex-row xl:items-start flex-col items-center mb-11 gap-10">
-                <div className="">
+                <div className="w-full xl:w-7/12">
                     {PRODUCTS.map((product) => {
                         if(cartItems[product.id] !== 0) {
                             return <CartItem key={product.id} data={product}/>;                            
