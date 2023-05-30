@@ -1,10 +1,10 @@
 import React from "react";
-//import { PRODUCTS } from '../../products';
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "phosphor-react";
+import { LongText } from "../../components/longText";
 
 export const ProductDetail = () => {
     const { id } = useParams();
@@ -14,16 +14,16 @@ export const ProductDetail = () => {
     const cartItemAmount = cartItems[id];
 
     return (
-        <div className="flex justify-center items-start mt-40">
+        <div className="flex justify-center items-start mt-24">
             <div className="flex flex-col lg:flex-row justify-center items-start gap-10 w-3/4">
                 <img src={infoItem.productImage} alt="" className="w-96 shadow-xl rounded-md border"/>
-                <div className="flex flex-col items-start justify-center gap-9 w-1/3">
+                <div className="flex flex-col items-start justify-center gap-8 w-1/3">
                     <div className="flex flex-col  gap-10"> 
                         <Link to={'/'} className="flex justify-center items-center gap-4 border-2 border-blue-800 text-center text-xl py-2 w-80 font-poppins font-bold rounded-md duration-300 hover:bg-blue-800 hover:text-white"><ArrowLeft /> Back To All Products</Link>
                         <div className="flex flex-col gap-4">   
-                            <h1 className="text-blue-900 font-extrabold text-4xl font-poppins">{infoItem.productName}</h1>
-                            <p>Lorem Ipsum</p>
+                            <h1 className="text-blue-900 font-extrabold text-3xl font-poppins">{infoItem.productName}</h1>
                             <p className="text-blue-900 text-2xl font-semibold">${infoItem.price}</p>
+                            <LongText text={infoItem.productDesc} />
                         </div>
                     </div>
                     <div className="grid grid-cols-2 grid-rows-3 gap-4">

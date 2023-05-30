@@ -10,11 +10,11 @@ export const CartItem = (props) => {
 
     const cartItemAmount = cartItems[id];
     return (
-        <div className="flex rounded-lg shadow-lg border p-11 mb-9 gap-6">
+        <div className="flex flex-col sm:flex-row rounded-lg shadow-lg border p-11 mb-9 gap-6">
             <img className="w-28" src={productImage} alt={productName} />
-            <div className="flex gap-32">
+            <div className="flex flex-col sm:flex-row gap-12 sm:gap-32">
                 <div className="flex flex-col w-36 gap-5">
-                    <Link to={`/product/${id}`}><p className="hover:opacity-50"><b>{productName}</b></p></Link>
+                    <Link to={`/product/${id}`}><p className="text-xl hover:opacity-50"><b>{productName}</b></p></Link>
                     <p> ${price}</p>
                 </div>
                 <div className="flex flex-col gap-12 justify-center">

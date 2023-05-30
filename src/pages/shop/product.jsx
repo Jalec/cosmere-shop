@@ -8,7 +8,7 @@ export const Product = (props) => {
 
     const cartItemAmount = cartItems[id];
     return (
-        <div className="bg-white w-64 h-96 flex flex-col gap-6 justify-center items-center rounded-lg shadow-lg border">
+        <div className="bg-white w-64 h-96 flex flex-col gap-6 justify-center items-center rounded-lg shadow-lg border mb-8">
             <Link to={`/product/${id}`}><img src={productImage} alt={productName} className="w-44" /></Link>
             <div className="flex flex-col items-center ">
                 <div className="py-3 font-poppins">

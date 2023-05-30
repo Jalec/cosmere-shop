@@ -13,7 +13,7 @@ export const Cart = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="flex flex-col justify-center items-center mt-12 gap-20 font-poppins">
+        <div className="flex flex-col justify-center items-center mt-10 2xl:gap-20 xl:gap-8 font-poppins">
             <div className="text-blue-700 text-4xl font-extrabold font-poppins">
                 <h1>Your Cart</h1>
             </div>
@@ -26,7 +26,7 @@ export const Cart = () => {
                     })}
                 </div>
                 { getTotalCartAmount() > 0 ? (
-                        <div className="rounded-lg border shadow-md h-80 w-96 p-11">
+                        <div className="rounded-lg border shadow-md h-80 w-80 sm:w-96 p-11">
                             <div className="mb-2 flex flex-col">
                                 <p className="text-gray-700 flex justify-between"><span>Subtotal:</span><span>${getTotalCartAmount()}</span></p>
                                 <p className="text-gray-700 flex justify-between"><span>Shipping:</span><span>$0</span></p>
