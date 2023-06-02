@@ -8,8 +8,8 @@ export const LongText = (props) => {
   }
 
   return (
-    <div className='font-poppins font-light'>
-        <div className={`text-container ${isExpanded ? 'h-auto' : 'h-20 overflow-hidden border-b border-transparent'}`}>
+    <div className='font-inter font-light text-gray-700'>
+        <div className={`text-container ${isExpanded ? 'h-auto text-left tracking-tighter w-80' : 'h-20 overflow-hidden border-b border-transparent tracking-tighter w-80' }`}>
             {isExpanded ? props.text : props.text.slice(0, 143) + '...'}
         </div>
         {!isExpanded ? (

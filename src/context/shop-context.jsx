@@ -1,4 +1,4 @@
-import React, { createContext, useState} from "react";
+import React, { createContext, useState } from "react";
 import { PRODUCTS } from "../products";
 
 export const ShopContext = createContext(null);
@@ -16,6 +16,7 @@ export const ShopContextProvider = (props) => {
     });
 
     const [itemsAmount, setItemAmount] = useState(0);
+    const [filteredProducts, setFilteredProducts] = useState(null);
 
     const addToTotal = () => {
         setItemAmount((prev) => prev + 1);
@@ -46,7 +47,11 @@ export const ShopContextProvider = (props) => {
     }
 
     const updateCartItemCount = (newAmount, itemId) => {
-        setCartItems((prev) => ({...prev, [itemId]: newAmount }))
+        setCartItems((prev) => ({...prev, [itemId]: prev[itemId] + newAmount }))
+    }
+
+    const removeCartItemCount = (itemId) => {
+        setCartItems((prev) => ({...prev, [itemId]: 0 }))
     }
 
     const getInfoProduct = (itemId) => {
@@ -54,7 +59,11 @@ export const ShopContextProvider = (props) => {
         return infoItem;
     }
 
-    const contextValue = { cartItems, addToCart, removeFromCart, updateCartItemCount, getTotalCartAmount, getInfoProduct, itemsAmount, setItemAmount }
+    const resetShop = () => {
+        setFilteredProducts(null);
+    }
+
+    const contextValue = { cartItems, addToCart, removeFromCart, updateCartItemCount, removeCartItemCount, getTotalCartAmount, getInfoProduct, itemsAmount, setItemAmount, filteredProducts, setFilteredProducts, resetShop }
 
     return (
         <ShopContext.Provider value={contextValue}>
