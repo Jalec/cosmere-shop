@@ -15,6 +15,7 @@ export const ProductDetail = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    
     const increaseCounter = () => {
         setCounter(prev => prev + 1);
         setIsActivated(true);
