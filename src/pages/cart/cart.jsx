@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { PRODUCTS } from "../../products";
 import { ShopContext } from "../../context/shop-context";
 import { CartItem } from "../../components/cart-item";
@@ -9,11 +9,14 @@ import { useNavigate } from 'react-router-dom';
 
 export const Cart = () => {
     const { cartItems, getTotalCartAmount, resetShop } = useContext(ShopContext);
+    const navigate = useNavigate();
 
-    const navigate = useNavigate()
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
-        <div className="flex flex-col justify-center items-center mt-10 2xl:gap-20 xl:gap-8 gap-12 font-inter">
+        <div className="flex flex-col justify-center items-center mt-10 2xl:gap-20 xl:gap-8 gap-6 font-inter">
             <div className="text-blue-700 text-4xl font-extrabold font-poppins">
              { getTotalCartAmount() > 0 && <h1>Your Cart</h1> }
             </div>
