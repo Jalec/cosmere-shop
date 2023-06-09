@@ -15,7 +15,7 @@ export const Navbar = () => {
                 <Link className="text-l sm:text-xl flex justify-center items-center gap-4 font-rowdies hover:text-gray-300" to="/" onClick={resetShop}> <img className="w-12" src="/bridge4.png" alt="" /> Cosmere Collection </Link>
                 <div className="flex items-center  gap-3 sm:gap-12">
                     <Link to="/login">  
-                        <div className="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">
+                        <div className="border focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center focus:ring-gray-600 bg-gray-800 border-gray-700 text-white hover:bg-gray-700">
                             Login
                         </div>
                     </Link>
