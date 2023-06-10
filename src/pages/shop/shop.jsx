@@ -39,7 +39,7 @@ export const Shop = () => {
                 <Filter options={options} onFilterChange={handleFilter} />
                 <SearchBar onSearch={handleSearch} />
             </div>
-            <div className="flex flex-col pt-12 pb-12 2xl:px-64 xl:px-40 md:px-32 sm:px-32 px-auto">
+            <div className="flex flex-col pt-12 pb-12 2xl:px-56 xl:px-52 md:px-28 sm:px-32 px-auto">
                 <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center content-center gap-7">
                     {!filteredProducts ? (
                         PRODUCTS.map((product) => (

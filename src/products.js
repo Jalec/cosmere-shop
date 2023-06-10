@@ -1,11 +1,11 @@
-import product1 from './assets/neutral-book.webp';
-import product2 from './assets/neutral-book.webp';
-import product3 from './assets/neutral-book.webp';
-import product4 from './assets/neutral-book.webp';
-import product5 from './assets/neutral-book.webp';
-import product6 from './assets/neutral-book.webp';
-import product7 from './assets/neutral-book.webp';
-import product8 from './assets/neutral-book.webp';
+import product1 from './assets/kings.webp';
+import product2 from './assets/AlloyOfLaw.webp';
+import product3 from './assets/emerald.webp';
+import product4 from './assets/elantrisbook.webp';
+import product5 from './assets/mist.webp';
+import product6 from './assets/heroages.webp';
+import product7 from './assets/wellwell.webp';
+import product8 from './assets/warwar.webp';
 
 export const PRODUCTS = [
     {
